@@ -31,7 +31,7 @@ jobs:
           keys:
 #          - v1-dependencies-{{ checksum "build.gradle" }}
 #          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies
+          - v1-dependencies1
 
       - save_cache:
           paths:
@@ -39,7 +39,7 @@ jobs:
 #            - ~/.gradle/wrapper/
             - ~/.gradle
 #          key: v1-dependencies-{{ checksum "build.gradle" }}
-          key: v1-dependencies
+          key: v1-dependencies1
 
       # run tests!
       - run: ./gradlew check
