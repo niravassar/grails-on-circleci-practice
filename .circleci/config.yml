@@ -42,6 +42,9 @@ jobs:
       # run tests!
       - run: ./gradlew check
 
+dependencies:
+  post:
+    - rm -r ~/.gradle
 
 
 
