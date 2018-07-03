@@ -23,7 +23,7 @@ jobs:
 
     steps:
       - checkout
-      - run: chmod +x gradlew
+      - run: ls -a
 
       # Download and cache dependencies
       - restore_cache:
