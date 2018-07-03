@@ -40,7 +40,7 @@ jobs:
 #          key: v1-dependencies
 
       # run tests!
-      - run: - rm -r ~/.gradle #./gradlew check
+      - run: - rm -r ~/.gradle
 
 
 
