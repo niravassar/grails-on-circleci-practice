@@ -38,7 +38,7 @@ jobs:
             - ~/.gradle/caches/
             - ~/.gradle/wrapper/
 #          key: v1-dependencies-{{ checksum "build.gradle" }}
-         key: v1-dependencies
+          key: v1-dependencies
 
       # run tests!
       - run: ./gradlew check
