@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/openjdk:8-jdk
+      - image: circleci/openjdk:8-jdk-browsers
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -29,19 +29,18 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-#          - v1-dependencies-{{ checksum "build.gradle" }}
-#          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies3
+            - v1-dependencies-99
 
+      # run tests!
+      - run: ./circleci-build.sh
+      
       - save_cache:
           paths:
             - ~/.gradle/caches/
             - ~/.gradle/wrapper/
-#          key: v1-dependencies-{{ checksum "build.gradle" }}
-          key: v1-dependencies3
+          key: v1-dependencies-99
 
-      # run tests!
-      - run: ./circleci-build.sh
+
 
 
 
