@@ -41,7 +41,7 @@ jobs:
           key: v1-dependencies3
 
       # run tests!
-      - run: ./gradlew check
+      - run: ./circleci-build.sh
 
 
 
